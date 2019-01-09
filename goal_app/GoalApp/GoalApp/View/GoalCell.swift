@@ -11,7 +11,6 @@ import UIKit
 class GoalCell: UITableViewCell {
 
     @IBOutlet weak var goalDescLabel: UILabel!
-    
     @IBOutlet weak var goalTypeLabel: UILabel!
     @IBOutlet weak var goalProgressLabel: UILabel!
  

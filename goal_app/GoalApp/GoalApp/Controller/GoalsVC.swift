@@ -20,8 +20,9 @@ class GoalsVC: UIViewController {
         tableView.dataSource = self
         tableView.isHidden = false
     }
+    
     @IBAction func goalBtnPress(_ sender: Any) {
-        print("Button Pressed")
+//        print("Button Pressed")
     }
 }
 

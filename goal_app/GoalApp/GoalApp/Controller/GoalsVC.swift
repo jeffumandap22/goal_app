@@ -124,29 +124,13 @@ extension GoalsVC {
         }
     }
     
-//    func removeGoal(atIndex indexPath: IndexPath) {
-//        guard let manageContext = appDelegate?.persistentContainer.viewContext else { return }
-//
-//        manageContext.delete(goals[indexPath.row])
-//
-//        do {
-//            try manageContext.save()
-//            undoView.isHidden = false
-//            print("Successfully removed goal.")
-//        } catch {
-//            debugPrint("Could not remove: \(error.localizedDescription)")
-//        }
-//    }
-    
     func fetch(completion: (_ complete: Bool) -> ()) {
         guard let manageContext = appDelegate?.persistentContainer.viewContext else { return }
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Goal")
-        //let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
+        let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
         
         do {
-            goals = try manageContext.fetch(fetchRequest) as! [Goal]
-            //goals = try manageContext.fetch(fetchRequest)
+            goals = try manageContext.fetch(fetchRequest)
             print("Successfully fetched data.")
             completion(true)
         } catch {
